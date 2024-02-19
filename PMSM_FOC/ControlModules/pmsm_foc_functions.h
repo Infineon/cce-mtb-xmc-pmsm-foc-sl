@@ -285,7 +285,7 @@ typedef struct HallType /* For Hall signal processing */
 
   extern FOCOutputType FOCOutput;                 // Output for FOC LIB.
   extern SVMType SVM;                          // SVM information, such as sector 0 ~ 5 (A ~ F) in SVM space vector hexagon.
-
+  extern ADCType ADC;
 
 extern __RAM_FUNC void PLL_Imag(int32_t Vref_AngleQ31, int32_t I_Alpha_1Q31, int32_t I_Beta_1Q31);
 extern __RAM_FUNC void PLL_Imag_GetResult(PLL_EstimatorType* const HandlePtr);

@@ -51,6 +51,8 @@
 #ifndef PMSM_FOC_MIDSYS_PMSM_FOC_CURRENT_THREESHUNT_H_
 #define PMSM_FOC_MIDSYS_PMSM_FOC_CURRENT_THREESHUNT_H_
 
+#define ADCLPF		(5U)								/* ADC uses LPF Y[n] = Y[n-1] + (X[n] - Y[n-1]) >> ADCLPF. */
+
 /*********************************************************************************************************************
  * HEADER FILES
  ***************************************/
@@ -80,7 +82,6 @@
  * MACROS
  ***************************************/
 #define SHIFT_I		(0U)
-#define ADCLPF		(5U)								/* ADC uses LPF Y[n] = Y[n-1] + (X[n] - Y[n-1]) >> ADCLPF. */
 
 extern ADCType ADC;
 

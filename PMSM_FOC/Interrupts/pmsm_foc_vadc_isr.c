@@ -101,7 +101,7 @@ void pmsm_foc_vadc_source_irqhandler(void)
 
 #if(VDC_UNDER_OVERVOLTAGE_PROTECTION == ENABLED)
 void pmsm_foc_over_under_voltage_isr(){
-	DCLink_adc_result = VADC_VDC_GROUP->RES[VADC_VDC_RESULT_REG];
+	uint16_t DCLink_adc_result = VADC_VDC_GROUP->RES[VADC_VDC_RESULT_REG];
 	if (Motor.Transition_Status == MOTOR_STABLE)  {
 		if(VADC_VDC_GROUP->CEFLAG & (1 << VADC_VDC_CHANNEL))
 		{
